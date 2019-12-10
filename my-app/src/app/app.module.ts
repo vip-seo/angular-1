@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
 import { DataService } from "./data.service";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DataService } from "./data.service";
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    MainComponent
+    MainComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
