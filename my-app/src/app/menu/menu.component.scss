@@ -2,3 +2,19 @@ div {
   height: 600px;
   background-color: rgb(31, 161, 64);
 }
+ul {
+
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: lightgrey;
+  }
+}
+.active {
+  color:red;
+  font-weight: 900;
+}
