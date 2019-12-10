@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  border: 1px solid black;
+  margin: 3px;
+  padding: 5px;
+}
+
+:host ::ng-deep p {
+  font-style: italic;
+  color: blue;
+}
+
