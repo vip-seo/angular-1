@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  public chapterDesc: string = 'Same description';
   constructor() { }
 
   ngOnInit() {
   }
-
+public getDesc(): string {
+  return this.chapterDesc;
+}
+public showResult(value: number): void{
+  alert(value);
+}
 }

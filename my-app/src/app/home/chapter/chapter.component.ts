@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chapter',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chapter.component.scss']
 })
 export class ChapterComponent implements OnInit {
+@Input() public desc: string = 'EMPTY';
 
   constructor() { }
 

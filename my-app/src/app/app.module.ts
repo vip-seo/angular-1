@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { DataService } from "./data.service";
 import { HomeComponent } from './home/home.component';
 import { ChapterComponent } from './home/chapter/chapter.component';
+import { CounterComponent } from './home/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ChapterComponent } from './home/chapter/chapter.component';
     MenuComponent,
     MainComponent,
     HomeComponent,
-    ChapterComponent
+    ChapterComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
