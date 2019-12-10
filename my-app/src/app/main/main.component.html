@@ -1,0 +1,12 @@
+<div>
+  <ul>
+    <li *ngFor="let user of list" (click)="showUserDetail(user)">
+      {{user.name}}
+    </li>
+  </ul>
+  <div *ngIf="currentUser">
+    <p>{{currentUser.name}}</p>
+    <p>{{currentUser.age}}</p>
+  </div>
+</div>
+
