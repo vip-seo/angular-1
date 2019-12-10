@@ -20,7 +20,7 @@ public list: User[] = [];
 
   public ngOnInit(): void {
     this.dataService.getUsers().subscribe(
-      next: (users: User[]) => {
+      (users: User[]) => {
         this.list = users;
       }
     );
