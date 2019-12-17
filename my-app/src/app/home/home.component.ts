@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,11 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnChanges, OnInit, OnDestroy {
   public chapterDesc: string = 'Same description';
-  constructor() { 
-    console.log('constructor');
+  
+  constructor(
+    private ds: DataService
+    ) { 
+    
   }
 
   ngOnChanges()  {
@@ -22,6 +26,10 @@ export class HomeComponent implements OnChanges, OnInit, OnDestroy {
   ngOnDestroy() {
     console.log('ngOnDestroy');
   }
+public sendMessage() {
+  this.ds.sendMessage('Hello!!!');
+}
+
 public getDesc(): string {
   return this.chapterDesc;
 }

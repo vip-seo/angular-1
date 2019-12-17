@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, Input } from '@angular/core';
+import {DataService} from "../../data.service";
 
 @Component({
   selector: 'app-chapter',
@@ -8,13 +9,16 @@ import { Component, OnChanges, OnInit, Input } from '@angular/core';
 export class ChapterComponent implements OnChanges, OnInit {
 @Input() public desc: string = 'EMPTY';
 test: string = '123';
-  constructor() { }
+  constructor(private ds: DataService) { }
 
   ngOnChanges(): void {
     console.log(this.desc);
   }
 
   ngOnInit() {
+    this.ds.getMessage().subscribe((msg: string) =>{
+      this.test = msg;
+    })
   }
 
 }
