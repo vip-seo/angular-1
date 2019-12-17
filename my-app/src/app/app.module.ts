@@ -11,6 +11,8 @@ import { DataService } from "./data.service";
 import { HomeComponent } from './home/home.component';
 import { ChapterComponent } from './home/chapter/chapter.component';
 import { CounterComponent } from './home/counter/counter.component';
+import { BindingComponent } from './binding/binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { CounterComponent } from './home/counter/counter.component';
     MainComponent,
     HomeComponent,
     ChapterComponent,
-    CounterComponent
+    CounterComponent,
+    BindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [],
   providers: [DataService],

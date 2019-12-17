@@ -1,0 +1,21 @@
+
+<!-- <img [src]="imgSrc" alt="dd"> -->
+<div [class]="currentClasses">Hello</div>
+<button (click)="taggleClasses()">click me</button>
+<div 
+[class.accent-border]="isBorder"
+[class.error-text]="isText"
+[class.highlighted]="isHigh">Hello 2</div>
+<input type="checkbox" [(ngModel)]="isBorder">border <br>
+<input type="checkbox" [(ngModel)]="isText">text <br>
+<input type="checkbox" [(ngModel)]="isHigh">highlighted <br>
+
+<input type="text" [(ngModel)]="user.name">name
+<input type="number" [(ngModel)]="user.age">age
+<input type="text" [value]="name" (input)="name = $event.target.value">property
+
+<hr>
+<p>{{user.name}}</p>
+<p>{{user.age}}</p>
+<p>{{name}}</p>
+<button (click)="send()">send</button>
