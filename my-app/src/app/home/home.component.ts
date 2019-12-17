@@ -1,14 +1,18 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnChanges, OnInit, OnDestroy {
   public chapterDesc: string = 'Same description';
   constructor() { 
     console.log('constructor');
+  }
+
+  ngOnChanges()  {
+    console.log('ngOnChanges');
   }
 
   ngOnInit()  {

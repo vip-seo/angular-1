@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from "./user.model";
-import { Observable, of } from "rxjs";
+import { Observable, of, Subject } from "rxjs";
 
 const USERS: User[] = [
   {name: 'Ivan1', age: 22},
@@ -14,11 +14,19 @@ const USERS: User[] = [
 @Injectable()
  
 export class DataService {
-
-  constructor() { }
+subject$: Subject<string> = new Subject();
+  
+constructor() { }
+  
   public getUsers(): Observable<User[]> {
     return of(USERS);
   }
-  
+
+  public sendMessage(msg: string) {
+    this.subject$.next(msg);
+  }
+  public getMessage(): Observable<string> {
+    return this.subject$.asObservable();
+  }
 }
 
