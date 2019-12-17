@@ -16,7 +16,8 @@ public name: string = 'default name';
 
  public increment(): void {
    this.counterValue = this.counterValue + this.counterStep;
- }
+ 
+  }
 
  public emit(): void {
 this.result.emit(this.counterValue);

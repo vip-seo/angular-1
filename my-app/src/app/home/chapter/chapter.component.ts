@@ -21,4 +21,28 @@ test: string = '123';
     })
   }
 
+  ngDoCheck() {
+    console.log('ngDoCheck');
+  }
+
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked');
+  }
+
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewtInit');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
+  }
+
 }
