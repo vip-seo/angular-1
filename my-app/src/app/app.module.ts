@@ -12,7 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { ChapterComponent } from './home/chapter/chapter.component';
 import { CounterComponent } from './home/counter/counter.component';
 import { BindingComponent } from './binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,14 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ChapterComponent,
     CounterComponent,
-    BindingComponent
+    BindingComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [],
   providers: [DataService],

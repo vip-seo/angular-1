@@ -1,0 +1,9 @@
+<p>forms works!</p>
+<form [formGroup]="myForm" (ngSubmit)="send()">
+  <input formControlName="login" type="text">Login <br>
+  <div *ngIf="login.invalid && login.dirty && login.getError('required')">require field</div>
+  <div *ngIf="login.invalid && login.dirty && login.getError('email')">email field</div>
+  
+  <input formControlName="password" type="password">Password <br>
+  <input type="submit" value="send"> 
+</form>
