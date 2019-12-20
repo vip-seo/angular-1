@@ -1,16 +1,24 @@
 
 <!-- <img [src]="imgSrc" alt="dd"> -->
-<div [class]="currentClasses">Hello</div>
-<button (click)="taggleClasses()">click me</button>
+<!-- <div [class]="currentClasses">Hello</div>
+<button (click)="taggleClasses()">click me</button> -->
 <div 
 [class.accent-border]="isBorder"
 [class.error-text]="isText"
-[class.highlighted]="isHigh">Hello 2</div>
-<input type="checkbox" [(ngModel)]="isBorder">border <br>
-<input type="checkbox" [(ngModel)]="isText">text <br>
-<input type="checkbox" [(ngModel)]="isHigh">highlighted <br>
+[class.highlighted]="isHigh">Hello 2</div>  -->
+<!-- <h1>{{condition ? 'Edit' : 'Create'}} product</h1>
+<div [style.color]="condition ? 'green' : 'red'">Hello</div> --> -->
+<!-- 
+<div [ngClass]="allClasses">NG CLASS</div>
+<div [ngClass]="settings">NG CLASS OBJECT</div>
+<div [ngClass]="settings2">NG CLASS OBJECT</div>
+<div [ngStyle]="settings3">NG Style</div> -->
+<!-- 
+<input type="checkbox" [(ngModel)]="settings2['accent-border']">border <br>
+<input type="checkbox" [(ngModel)]="settings2['errot-text']">text <br>
+<input type="checkbox" [(ngModel)]="isHigh">highlighted <br> -->
 
-<input type="text" [(ngModel)]="user.name">name
+<!-- <input type="text" [(ngModel)]="user.name">name
 <input type="number" [(ngModel)]="user.age">age
 <input type="text" [value]="name" (input)="name = $event.target.value">property
 
@@ -18,4 +26,23 @@
 <p>{{user.name}}</p>
 <p>{{user.age}}</p>
 <p>{{name}}</p>
-<button (click)="send()">send</button>
+<button (click)="send()">send</button> -->
+
+<div [ngSwitch]="choice" class="accent-border">
+  <div *ngSwitchCase="'1'">Option 1</div>
+  <div *ngSwitchCase="'2'">Option 2</div>
+  <div *ngSwitchCase="'3'">Option 3</div>
+  <div *ngSwitchDefault>Default</div>
+</div>
+
+<!-- <input (input)="choice = $event.target.value" type="text"> Choice  -->
+
+<!-- <input #textInput [(ngModel)]="choice" type="text"> Choice  -->
+
+<input #textInput type="text"> Choice 
+<button (click)="ok(textInput.value)">ok</button>
+
+<div *ngIf="choice === '4'; else other">Section 1</div>
+<ng-template #other>
+<div>Section 2</div>
+</ng-template>

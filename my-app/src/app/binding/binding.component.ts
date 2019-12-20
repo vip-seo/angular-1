@@ -17,10 +17,31 @@ export class BindingComponent implements OnInit {
 
   public allClasses: string = "accent-border error-text highlighted";
   public currentClasses: string = '';
-
   public isBorder: boolean = true;
   public isText: boolean = true;
   public isHigh: boolean = false;
+
+  public settings = {
+    'accent-border': this.isBorder,
+    'error-text': this.isText,
+    'highlighted': this.isHigh 
+   };
+
+   public settings2 = {
+    'accent-border': true,
+    'error-text': true,
+    'highlighted': false 
+   };
+
+   public settings3 = {
+    'border': ' 1px solid black',
+    'color': 'red',
+    'background': 'yellow'
+   };
+
+    public choice: string = '';
+
+  public arrClasses: string[] = ["accent-border", "error-text", "highlighted"];
 
   public name: string = 'Ivan';
   
@@ -31,6 +52,9 @@ export class BindingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  public ok(value: string): void {
+    this.choice = value;
   }
 
   taggleClasses(): void {
@@ -50,4 +74,14 @@ export class BindingComponent implements OnInit {
   public send(): void {
     console.log(this.user);
   }
+
+  public condition: boolean = false;
+  public getStyle(): string {
+    if (this.condition === true){
+      return 'green';
+    } else {
+      return 'red';
+    }
+  }
+
 }
